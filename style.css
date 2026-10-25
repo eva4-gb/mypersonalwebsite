@@ -1,0 +1,776 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --bg-color: #080A0D;
+    --second-bg-color: #121820;
+    --text-color: #F4F7FA;
+    --main_color: #B6FF00;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo span{
+    text-shadow: 0 0 25px var(--main_color);
+}
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main_color);
+    border-bottom: 3px solid var(--main_color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main_color);
+    display: none;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+span{
+    color: var(--main_color);
+}
+
+.logo span{
+    color: var(--main_color);
+}
+
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+.home-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.home.img{
+    border-radius: 50%;
+}
+.home-img img{
+    position: relative;
+    top: 3rem;
+    width: 34vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main_color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.home-img img:hover {
+    box-shadow:
+        0 0 25px var(--main_color),
+        0 0 50px var(--main_color),
+        0 0 100px var(--main_color);
+}
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 1000px;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main_color);
+    box-shadow: 0 0 25px var(--main_color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--text_color);
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main_color);
+}
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: "Head Macintosh Technician";
+    color: var(--main_color);
+    animation: words 20s infinite;
+}
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--main_color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(30) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main_color);
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content: "Mac Technician";
+    }
+    21%,
+    40%{
+        content: "Marathoner";
+    }
+    41%,
+    60%{
+        content: "Trail Runner";
+    }
+    61%,
+    80%{
+        content: "Ultramarathoner";
+    }
+    81%,
+    100%{
+        content: "IT Student";
+    }
+}
+
+@keyframes typing {
+    10%, 15%,
+    30%, 35%,
+    50%, 55%,
+    70%, 75%,
+    90%, 95% {
+        width: 0;
+    }
+
+    5%, 20%,
+    25%, 40%,
+    45%, 60%,
+    65%, 80%,
+    85%, 100% {
+        width: calc(100% + 8px);
+    }
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+}
+.about h2 span{
+    color: var(--main_color);
+    text-shadow: 0 0 50px var(--main_color);
+}
+.about-img{
+    border-radius: 50%;
+}
+.about-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main_color);
+    top: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.about-img img:hover{
+     box-shadow:
+        0 0 25px var(--main_color),
+        0 0 50px var(--main_color),
+        0 0 100px var(--main_color);
+}
+.heading{
+    text-align: center;
+    font-size: 8rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.5;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+.about-content .text-animation span::before{
+    content: "Mac Technician";
+    color: var(--main_color);
+    animation: words 20s infinite;
+}
+.about-content .text-animation span::after{
+    content: "";
+    background-color: var(--second-bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+::-webkit-scrollbar{
+    background-color: var(--main_color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main_color);
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-box {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.image-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s ease;
+    border-radius: 20px;
+}
+
+.image-box img:hover {
+    transform: scale(1.03);
+}
+
+.skills-img img{
+    position: relative;
+    width: 32vw;
+    border: 50%;
+    box-shadow: 0 0 25px var(--main_color);
+    top: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.skills {
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 100px 9%;
+}
+
+/* CENTERED HOBBIES TITLE */
+.skills h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--main_color);
+}
+
+/* CENTERED DESCRIPTION - SAME AS VIDEOS */
+.skills .section-description {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--main_color);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* HOBBIES IMAGE GRID */
+.skills .image-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* SOFT EDGES ON IMAGES */
+.skills .image-box {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.skills .image-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.skills .image-box img:hover {
+    transform: scale(1.03);
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .skills .image-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .skills .image-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skills h1 {
+        font-size: 2.8rem;
+    }
+
+    .skills .section-description {
+        font-size: 1.5rem;
+    }
+}
+
+
+.achievements {
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 100px 9%;
+}
+
+/* CENTERED HOBBIES TITLE */
+.achievements h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* CENTERED DESCRIPTION - SAME AS VIDEOS */
+.achievements.section-description {
+    font-size: 1.6rem;
+    text-align: center;
+    color: #bbbbbb;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* HOBBIES IMAGE GRID */
+.achievements .image-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* SOFT EDGES ON IMAGES */
+.achievements .image-box {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.achievements .image-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.achievements .image-box img:hover {
+    transform: scale(1.03);
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .achievements .image-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .achievements .image-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .achievements h1 {
+        font-size: 2.8rem;
+    }
+
+    .achievements .section-description {
+        font-size: 1.5rem;
+    }
+}
+
+/* HOBBIES SECTION */
+
+.hobbies {
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 100px 9%;
+}
+
+/* CENTERED HOBBIES TITLE */
+.hobbies h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* CENTERED DESCRIPTION - SAME AS VIDEOS */
+.hobbies .section-description {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* HOBBIES IMAGE GRID */
+.hobbies .image-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* SOFT EDGES ON IMAGES */
+.hobbies .image-box {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.hobbies .image-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.hobbies .image-box img:hover {
+    transform: scale(1.03);
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .hobbies .image-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hobbies .image-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hobbies h1 {
+        font-size: 2.8rem;
+    }
+
+    .hobbies .section-description {
+        font-size: 1.5rem;
+    }
+}
+
+.video-section {
+    min-height: 100vh;
+    padding: 100px 9%;
+}
+
+.video-section h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--main_color);
+    margin-bottom: 40px;
+}
+
+/* VIDEO GRID */
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* VIDEO CARD */
+.video-card {
+    background: var(--card-color);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #292929;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(202, 11, 245, 0.25);
+}
+
+/* VIDEO SIZE */
+.video-card video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: #000000;
+}
+
+/* VIDEO TITLE */
+.video-card h3 {
+    font-size: 1.8rem;
+    margin: 15px 15px 8px;
+    color: #8ada7c;
+    
+}
+
+/* VIDEO DESCRIPTION */
+.video-card p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 0 15px 20px;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .image-container,
+    .video-container{
+       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .image-container
+    .video-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+
+
+/* CYBER-ATHLETIC HEADER */
+.header {
+    background: rgba(8, 10, 13, 0.92);
+    border-bottom: 1px solid rgba(182, 255, 0, 0.35);
+    box-shadow: 0 4px 20px rgba(182, 255, 0, 0.06);
+}
+
+/* NEON SECTION HEADINGS */
+.skills h1,
+.achievements h1,
+.hobbies h1,
+.video-section h1 {
+    color: var(--main_color);
+    text-shadow: 0 0 12px rgba(182, 255, 0, 0.22);
+    letter-spacing: 1px;
+}
+
+/* SECTION DESCRIPTIONS */
+.skills .section-description,
+.achievements .section-description,
+.hobbies .section-description,
+.video-section .section-description {
+    color: #B8C4D0;
+    line-height: 1.7;
+}
+
+/* TERMINAL-STYLE SECTION HEADINGS */
+.skills h1,
+.achievements h1,
+.hobbies h1,
+.video-section h1 {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* NEON VIDEO CARD EFFECT */
+.video-card:hover {
+    border-color: var(--main_color);
+    box-shadow: 0 0 20px rgba(182, 255, 0, 0.15);
+}
+
+/* CLICKABLE PHOTOS */
+.image-box img,
+.home-img img,
+.about-img img {
+    cursor: pointer;
+}
+
+/* SMALL DESCRIPTION UNDER EACH PHOTO */
+.image-box {
+    background: var(--second-bg-color);
+    border: 1px solid rgba(182, 255, 0, 0.15);
+    border-radius: 15px;
+}
+
+.image-box img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.03);
+}
+
+.image-box .image-description {
+    padding: 10px 12px 14px;
+    color: #B8C4D0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* ENLARGED PHOTO BACKGROUND */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.image-modal.show {
+    display: flex;
+}
+
+
+.image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.image-modal.show {
+    display: flex;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+.close-modal:hover {
+    color: #ca0bf5;
+}
+
